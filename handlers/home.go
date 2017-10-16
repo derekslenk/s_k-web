@@ -1,11 +1,18 @@
 package handlers
 
 import (
-	"github.com/derekslenk/s_k-web/libhttp"
 	"html/template"
 	"net/http"
+
+	"github.com/derekslenk/s_k-web/libhttp"
 )
 
+type stats struct {
+	Episodes  int
+	AvgLength int
+}
+
+// GetHome handles the hompage
 func GetHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 
@@ -14,6 +21,9 @@ func GetHome(w http.ResponseWriter, r *http.Request) {
 		libhttp.HandleErrorJson(w, err)
 		return
 	}
-
-	tmpl.Execute(w, nil)
+	stats := stats{
+		Episodes:  68,
+		AvgLength: 55,
+	}
+	tmpl.Execute(w, stats)
 }
