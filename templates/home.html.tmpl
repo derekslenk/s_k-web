@@ -12,7 +12,7 @@
     <h1>Morsels of information to whet your whistle</h1>
     </div>
 <!-- <ul class="list-group">
-  <li class="list-group-item"><span class="badge">{{.Episodes}}</span>Number of episodes in this database</li>
+  <li class="list-group-item"><span class="badge">{{.EpisodeCount}}</span>Number of episodes in this database</li>
   <li class="list-group-item">Dapibus ac facilisis in</li>
   <li class="list-group-item">Morbi leo risus</li>
   <li class="list-group-item">Porta ac consectetur ac</li>
@@ -24,7 +24,7 @@
         <h3 class="panel-title">Number of episodes in this database</h3>
       </div>
       <div class="panel-body">
-        {{.Episodes}}
+        {{.EpisodeCount}}
       </div>
     </div>
 
@@ -33,7 +33,7 @@
         <h3 class="panel-title">Average length of "regular" episodes</h3>
       </div>
       <div class="panel-body">
-        {{.AvgLength}}
+        {{.AvgLength}} minutes
       </div>
     </div>
 
@@ -42,7 +42,7 @@
         <h3 class="panel-title">Number of "special" episodes (minisodes + vidisodes):</h3>
       </div>
       <div class="panel-body">
-        Coming Soon...
+        {{.SpecialEpisodeCount}}
       </div>
     </div>
   </div>
